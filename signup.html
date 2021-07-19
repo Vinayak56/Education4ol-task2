@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sign Up Form</title>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="signup" id="su">
+                <img src="img/signup1.jpg" alt="signup">
+                <div class="form2">
+                    <form autocomplete="off" onsubmit="signup(event)">
+                        <h2>Create An Account</h2>
+                        <input id="signupEmail" type="email" placeholder="Email" required>
+                        <input id="signupPassword" type="password" placeholder="Password" required>
+                        <input id="btn-signup" type="submit" value="Sign Up">
+                        <p class="signinn">Already have an account ?<br><a href="signin.html">Login</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="js/index.js"></script>
+    
+</body>
+</html>

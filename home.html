@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://kit.fontawesome.com/91d63fabe4.js" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div class="navbar">
+      <i class="fas fa-atom"></i>
+        <h1>Courses</h1>
+
+        <div class="dropdown">
+            <span>Profile</span>
+            <div class="dropdown-content">
+                <a onclick="getDetail()">Profile</a>
+                <a onclick="getHistory()">Histroy</a>
+                <a onclick="logout()">Logout</a>
+            </div>
+        </div>
+      <div class="bg"></div>
+
+    </div>
+
+
+    <div class="course">
+        <div class="card">
+            <img src="img/course1.jpg" alt="..."/>
+            <div class="card-body">
+              <h5 class="card-title">Python Course</h5>
+              <a id="c11" class="btn btn1">View Course</a>
+              <a id="c12" class="btn btn2" onclick="uploadCourse(event)">Buy</a>
+              <p>$45 <span>$69</span></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/course2.jpg" alt="..."/>
+            <div class="card-body">
+              <h5 class="card-title">Java Course</h5>
+              <a href="#" id="c21" class="btn btn1">View Course</a>
+              <a href="#" id="c22" class="btn btn2" onclick="uploadCourse(event)">Buy</a>
+              <p>$38 <span>$59</span></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/course3.png" alt="..."/>
+            <div class="card-body">
+              <h5 class="card-title">C Course</h5>
+              <a href="#" id="c31" class="btn btn1">View Course</a>
+              <a href="#" id="c32" class="btn btn2" onclick="uploadCourse(event)">Buy</a>
+              <p>$48 <span>$60</span></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/course4.png" alt="..."/>
+            <div class="card-body">
+              <h5 class="card-title">C++ Course</h5>
+              <a href="#" id="c41" class="btn btn1">View Course</a>
+              <a href="#" id="c42" class="btn btn2" onclick="uploadCourse(event)">Buy</a>
+              <p>$56 <span>$70</span></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/course5.jpg" alt="..."/>
+            <div class="card-body">
+              <h5 class="card-title">Php Course</h5>
+              <a href="#" id="c51" class="btn btn1">View Course</a>
+              <a href="#" id="c52" class="btn btn2" onclick="uploadCourse(event)">Buy</a>
+              <p>$54 <span>$90</span></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/course6.jpg" alt="..."/>
+            <div class="card-body">
+              <h5 class="card-title">Frontend Course</h5>
+              <a href="#" id="c61" class="btn btn1">View Course</a>
+              <a href="#" id="c62" class="btn btn2" onclick="uploadCourse(event)">Buy</a>
+              <p>$78 <span>$120</span></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/course7.jpg" alt="..."/>
+            <div class="card-body">
+              <h5 class="card-title">Backend Course</h5>
+              <a href="#" id="c71" class="btn btn1">View Course</a>
+              <a href="#" id="c72" class="btn btn2" onclick="uploadCourse(event)">Buy</a>
+              <p>$98 <span>$130</span></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/course8.jpg" alt="..."/>
+            <div class="card-body">
+              <h5 class="card-title">Datascience Course</h5>
+              <a href="#" id="c81" class="btn btn1">View Course</a>
+              <a href="#" id="c82" class="btn btn2" onclick="uploadCourse(event)">Buy</a>
+              <p>$105 <span>$159</span></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/course9.png" alt="..."/>
+            <div class="card-body">
+              <h5 class="card-title">Machine learning</h5>
+              <a href="#" id="c91" class="btn btn1">View Course</a>
+              <a href="#" id="c92" class="btn btn2" onclick="uploadCourse(event)">Buy</a>
+              <p>$125 <span>$200</span></p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="popup">
+      <div class="popup-content">
+        <img src="img/user.png" alt="user">
+        <i class="far fa-times-circle close"></i>
+        <div id="firbs-inp">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="history">
+      <div class="history-content">
+        <i class="far fa-times-circle close1"></i>
+        <i class="fas fa-book-reader book"></i>
+        <h1>Courses Enrolled</h1>
+        <table id="tabl">
+        </table>
+      </div>
+    </div>
+
+
+    <script src="js/index.js"></script>
+</body>
+</html>

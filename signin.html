@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login Form</title>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="signin">
+                <img src="img/login1.jpg" alt="login">
+                <div class="form1">
+                    <form autocomplete="off" onsubmit="login(event)">
+                        <h2>Sign In</h2>
+                        <input id="loginEmail" type="email" placeholder="email" required>
+                        <input id="loginPassword" type="password" placeholder="Password" required>
+                        <input id="btn-login" type="submit" >
+                        <p class="signup">Don't have an account ?<br><a href="signup.html">signup</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="js/index.js"></script>
+</body>
+</html>

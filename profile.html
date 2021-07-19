@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <title>Profile</title>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
+    <script src="https://kit.fontawesome.com/91d63fabe4.js" crossorigin="anonymous"></script>
+</head>
+<body style="background-image: url(img/bg-account.png);">
+    <div class="account">
+        <img src="img/account.gif" alt="account">
+        <div class="details">
+            <h1>ACCOUNT SETTINGS</h1>
+            <form id="add-data">
+                <input type="text" placeholder="Name" name="firstName" id="firstName">
+                <input type="text" placeholder="Surname" name="lastName" id="lastName">
+                <input type="text" placeholder="Phone" name="phoneNum">
+                <input type="text" placeholder="Country" name="country">
+                <input type="text" placeholder="Address" name="location">
+                <button class="btn" onclick="uploadData(event)">Update Details</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>

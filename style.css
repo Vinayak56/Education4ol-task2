@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    background-color: #00ADB5;
+}
+main{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+main .container{
+    position: relative;
+    border-top-right-radius: 15%;
+    border-bottom-right-radius: 15%;
+    height: 50rem;
+    width: 80rem;
+    background-color: #E1E5EA;
+    box-shadow: 1rem 1rem rgba(0,0,0,0.4);
+}
+main .container .signin,main .container #su{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+main .container .signin img,main .container .signup img{
+    width: 50%;
+    height: 100%;   
+}
+main .container .signin .form1,main .container .signup .form2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+main .container .signin .form1 h2,main .container .signup .form2 h2{
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+main .container .signin .form1 input,main .container .signup .form2 input{
+    width: 80%;
+    padding: 1rem;
+    border: none;
+    margin: 1.5rem 0;
+    color: black;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+main .container .signin .form1 input[type="submit"],main .container .signup .form2 input[type="submit"]{
+    cursor: pointer;
+    background-color: #00ADB5;
+    width: 30%;
+    border-radius: 10%;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+main .container .signin .form1 .signup,main .container .signup .form2 .signinn{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+@media all and (max-width: 700px) {
+    html{
+        font-size: 50%;
+    }
+    main .container .signin img,main .container .signup img{
+        display: none;
+    }
+    main .container{
+        border-radius: 0;
+        width: 90%;
+    }
+}

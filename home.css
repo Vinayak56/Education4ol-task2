@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+html{
+    font-size: 62.5%;
+}
+.btn{
+    display: inline-block;
+    margin-top: 0.5rem;
+    background-color: #3E215D;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.7rem;
+    color: white;
+    text-align: center;
+    width: 12rem;
+    border-radius: 5%;
+    cursor: pointer;
+}
+body{
+    width: 98vw;
+    height: 100vh;
+    background-color: #7C83FD;
+    position: relative;
+}
+body .navbar{
+    text-align: center;
+    position: relative;
+    height: 20rem;
+}
+body .navbar i{
+    color: black;
+    position: absolute;
+    left: 12%;
+    top: 10%;
+    font-size: 18rem;
+    animation-name: course-roll;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}
+@keyframes course-roll{
+    0%{
+        color: #362222;
+        transform: rotate(0deg);
+    }
+    25%{
+        color: #346751;
+        transform: rotate(90deg);
+    }
+    50%{
+        color: #52057B;
+        transform: rotate(180deg);
+    }
+    75%{
+        color: #290001;
+        transform: rotate(270deg);
+    }
+    100%{
+        color: #362222;
+        transform: rotate(360deg);
+    }
+}
+body .navbar h1{
+    font-size: 8rem;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    right: -40%;
+    bottom: 8rem;
+    font-size: 2.5rem;
+    padding: 0.5rem;
+    width: 22rem;
+    border: 0.2rem solid black;
+    cursor: pointer;
+}
+  
+.dropdown-content {
+    width: 22rem;
+    display: none;
+    font-weight: 600;
+    position: absolute;
+    top: 105%;
+    left: -1%;
+    background-color: #4F0E0E;
+    padding: 0.5rem 0.5rem;
+    z-index: 1;
+    
+}
+.dropdown-content a{
+    display: block;
+    border: 0.3rem solid black;
+    background-color: #FEF7DC;
+    margin: 0.1rem 0;
+}
+.dropdown-content a:hover{
+    margin: 1rem 0;
+    transform: scale(1.08);
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+body .course{
+    max-width: 90vw;
+    width: 90%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2.5rem;
+}
+body .course .card{
+    width: 25%;
+    height: 45vh;
+    margin: 2rem 0;
+    position: relative;
+    /* border: 1px solid black; */
+    text-align: center;
+}
+body .course .card img{
+    width: 100%;
+    height: 72%;
+}
+body .course .card h5{
+    font-size: 2.5rem;
+}
+body .course .card p{
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 5rem;
+    font-weight: 700;
+    display: none;
+    width: 100%;
+    height: 72%;
+    color: #50CB93;
+    padding: 8rem 2rem;
+}
+body .course .card p span{
+    text-decoration: line-through;
+    margin: 0.5rem;
+    font-size: 4rem;
+}
+body .course .card .btn1{
+    position: absolute;
+    left: 1%;
+    bottom: 1%;
+}
+body .course .card .btn2{
+    position: absolute;
+    right: 1%;
+    bottom: 1%;
+}
+body .course .card .btn2:hover ~ p{
+    display: block;
+    background-color: rgba(0, 0, 0, 0.87);
+    box-shadow: -16px -15px 0px 1px rgb(0, 0, 0);
+-webkit-box-shadow: -16px -15px 0px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: -16px -15px 0px 1px rgba(0,0,0,0.75);
+}
+
+
+body .account{
+    max-width: 60vw;
+    width: 80%;
+    height: 80vh;
+    border: 1px solid black;
+    margin: 7rem auto;
+    background-color: white;
+    padding: 1rem;
+}
+body .account img{
+    float: left;
+    width: 48%;
+    height: 100%;
+}
+body .account .details{
+    float: right;
+    width: 50%;
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+body .account .details h1{
+    margin: 3rem 0;
+    font-size: 3rem;
+}
+body .account .details #firstName,body .account .details #lastName{
+    display: inline-block;
+    width: 42%;
+    margin: 2rem 0.5rem;
+}
+body .account .details input{
+    display: block;
+    width: 88%;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.377);
+    margin: 3.4rem auto;
+    font-weight: 700;
+}
+body .account .details button{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+body .account::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+body .popup{
+    background-color: rgba(0, 0, 0, 0.678);
+    width: 98.65vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+body .popup-content{
+    height: 60rem;
+    width: 60rem;
+    background-color: #E98580;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    position: relative;
+    font-size: 1rem;
+}
+body .popup-content img{
+    border: 1px solid black;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    height: 18rem;
+    width: 18rem;
+    font-size: 12rem;
+}
+body .popup-content .close{
+    position: absolute;
+    top: -1.5rem;
+    right: -1.5rem;
+    background-color: black;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    font-size: 4rem;
+}
+
+body .history{
+    background-color: rgba(0, 0, 0, 0.678);
+    width: 98.65vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+body .history-content{
+    height: 60rem;
+    width: 50rem;
+    background-color: #E98580;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    position: relative;
+    font-size: 1.5rem;
+    margin-top: 6rem;
+}
+body .history-content .close1{
+    position: absolute;
+    top: -1.5rem;
+    right: -1.5rem;
+    background-color: black;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    font-size: 4rem;
+}
+body .history-content .book{
+    height: 18rem;
+    width: 18rem;
+    font-size: 12rem;
+    color: darkgreen;
+    border: 0.2rem solid white;
+    background-color: black;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    padding: 1.5rem;
+    border-radius: 50%;
+
+}
+body .history-content h1{
+    font-size: 3rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+body .history-content table{
+    width: 100%;
+    font-size: 3rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+@media all and (max-width: 1200px) {
+    html{
+        font-size: 50%;
+    }
+}
+
+@media all and (max-width: 980px) {
+    html{
+        font-size: 50%;
+    }
+    body .account img{
+        float: none;
+        display: none;
+    }
+    body .account .details{
+        float: none;
+        width: 100%;
+    }
+    body .account .details h1{
+        margin: 3rem 0;
+        font-size: 5rem;
+    }
+    body .account .details input{
+        font-size: 2.5rem;
+    }
+    body .navbar i{
+        display: none;
+    }
+    .dropdown {
+        display: block;
+        position: absolute;
+        left: 50%;
+        width: 30rem;
+        bottom: 12%;
+        transform: translate(-50%,0);
+        z-index: 2;
+    } 
+      
+    .dropdown-content {
+        width: 30rem;
+        height: 30vh;
+    }
+    .dropdown-content a{
+        display: block;
+        width: 29rem;
+        margin: 3rem 0;
+    }
+    .dropdown-content a:hover{
+        margin: 2rem 0;
+        transform: scale(1.2);
+    }
+      
+    .dropdown:hover ~ .bg{
+        position: absolute;
+        top: 0%;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.774);
+    }
+    body .course{
+        display: flex;
+        gap: 3rem;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    body .course .card{
+        width: 40%;
+        height: 50vh;
+    }
+    body .course .card h5{
+        font-size: 3.4rem;
+    }
+    body .course .card a{
+        width: 13vw;
+    }
+    body .course .card .btn1{
+        position: absolute;
+        left: 1%;
+        bottom: 1%;
+        font-size: 1.5rem;
+    }
+    body .course .card .btn2{
+        position: absolute;
+        right: 1%;
+        bottom: 1%;
+        font-size: 1.5rem;
+    }
+}
+@media all and (max-width: 780px) {
+    html{
+        font-size: 45%;
+    }
+    body .account .details h1{
+        margin: 2rem 0;
+        font-size: 5rem;
+    }
+
+}
+@media all and (max-width:620px) {
+    html{
+        font-size: 40%;
+    }
+    body .account .details h1{
+        margin: 5rem 0;
+        font-size: 4.6rem;
+    }
+    body .account .details #firstName,body .account .details #lastName{
+        display: block;
+        margin: 3rem auto;
+        width: 88%;
+    }
+    body .account .details input{
+        margin: 3rem auto;
+    }
+    body .course{
+        display: block;
+    }
+    body .course .card{
+        margin: 5rem auto;
+        width: 80%;
+        height: 65vh;
+    }
+    body .course .card h5{
+        margin-top: 2rem;
+        font-size: 4rem;
+    }
+    body .course .card a{
+        width: 13vw;
+    }
+    body .course .card .btn{
+        width: 20vw;
+        height: 6vh;
+        padding: 1.5rem;
+    }
+    body .course .card .btn1{
+        position: absolute;
+        left: 3%;
+        bottom: 3%;
+        font-size: 2rem;
+    }
+    body .course .card .btn2{
+        position: absolute;
+        right: 3%;
+        bottom: 3%;
+        font-size: 2rem;
+    }
+}
+@media all and (max-width:450px){
+    html{
+        font-size: 30%;
+    }
+}
